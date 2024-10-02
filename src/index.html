@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Astroship Pro - SAAS Startup Website Template for Astro</title>
+    <!-- favicon -->
+    <link
+      rel="icon"
+      href="./img/favicon/astro-removebg-preview.png"
+      sizes="16x16"
+    />
+
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <!-- ---google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- link css -->
+    <link rel="stylesheet" href="./output.css" />
+  </head>
+  <body class="font-Inter">
+    <!-- -----------HEADER------------ -->
+    <section
+      id="header"
+      class="z-50 px-4 sticky top-0 transition-all border-gray-200 backdrop-blur-lg"
+    >
+      <header class="container p-4 transition-all">
+        <nav class="lg:flex lg:justify-between lg:items-center">
+          <div class="logo flex justify-between">
+            <a
+              href="/src/index.html"
+              class="flex items-center rtl:space-x-reverse"
+            >
+              <p class="text-lg text-[#475569]">
+                <span class="text-indigo-600 font-semibold">Astro</span>ship
+              </p>
+              <p
+                class="uppercase text-[10px] bg-gray-200 px-2 py-1 font-bold rounded-md mt-0.5 ml-1 text-slate-700 leading-none"
+              >
+                pro
+              </p>
+            </a>
+            <button class="lg:hidden" id="top-menu-icon">
+              <span class="sr-only">Toggle Menu</span>
+              <i class="fa-solid fa-bars w-4 h-4"></i>
+            </button>
+          </div>
+
+          <ul class="lg:flex lg:gap-3" id="top-menu">
+            <li class="flex-col items-center justify-center">
+              <button
+                class="flex gap-2 justify-start items-center py-2 lg:px-3 text-gray-600 text-sm transition-all hover:text-indigo-600 relative"
+                id="dropdownNavbarLink"
+                data-dropdown-toggle="dropdownNavbar"
+              >
+                Pages<i class="fa-solid fa-chevron-down text-[10px]"></i>
+              </button>
+              <!-- dropdown Menu -->
+
+              <ul
+                class="lg:absolute lg:left-3/3 w-full lg:w-48 border-l border-slate-200 text-gray-600 text-sm px-3 lg:py-2 lg:bg-white lg:rounded-md lg:shadow lg:border z-50"
+                id="dropdown-menu"
+              >
+                <li class="transition-all hover:text-indigo-700 py-1">
+                  <a href="#">Features</a>
+                </li>
+                <li class="transition-all hover:text-indigo-700 py-1">
+                  <a href="#">Integrations</a>
+                </li>
+                <li class="transition-all hover:text-indigo-700 py-1">
+                  <a href="#">Blog Details</a>
+                </li>
+                <li class="transition-all hover:text-indigo-700 py-1">
+                  <a href="#">404 Page</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="lg:px-3 py-2 text-gray-600 text-sm flex transition-all hover:text-indigo-600"
+                >Pricing</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="lg:px-3 py-2 text-gray-600 text-sm flex transition-all hover:text-indigo-600"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="lg:px-3 py-2 text-gray-600 text-sm flex transition-all hover:text-[#7872EB]"
+                >Blog</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="lg:px-3 py-2 text-gray-600 text-sm flex transition-all hover:text-[#7872EB]"
+                >Contact</a
+              >
+            </li>
+            <li class="lg:hidden flex gap-4 justify-between">
+              <a
+                href="#"
+                class="text-sm text-black font-semibold bg-[#E5E7EB] transition-all hover:bg-[#e5e7ebb1] rounded-full text-center px-4 py-2 w-full"
+                ><span>Log in</span></a
+              >
+              <a
+                href="#"
+                class="bg-[#4e46e5] rounded-full text-center px-4 py-2 w-full transition-all hover:bg-[#3730a3]"
+                ><span class="text-white py-2">Try for Free</span></a
+              >
+            </li>
+          </ul>
+
+          <div class="hidden lg:flex lg:gap-4 lg:items-center">
+            <a
+              href="#"
+              class="text-sm text-[#111] font-medium py-1 px-2 space-x-2"
+              >Log in</a
+            >
+            <a href="#" class="bg-[#4f46e5] text-center px-4 py-2 rounded-full"
+              ><span class="text-white py-2 text-sm">Try for Free</span
+              ><i
+                class="fa-solid fa-chevron-right text-white text-xs ml-2 hover:translate-x-px transition-all"
+              ></i
+            ></a>
+          </div>
+        </nav>
+      </header>
+    </section>
+
+    <!------------- INTRO----------->
+    <section id="banner" class="container overflow-x-clip z-20 mx-auto px-4">
+      <div
+        class="mx-auto lg:flex md:justify-between justify-center items-center"
+      >
+        <!-- right content -->
+        <div class="flex-col justify-between lg:basis-3/6">
+          <h1
+            class="text-center lg:text-start text-black font-bold text-3xl lg:text-6xl tracking-tighter text-balance md:mx-0"
+          >
+            Create websites with Astroship&trade;
+          </h1>
+          <p
+            class="text-lg py-3 mt-4 text-slate-600 text-balance text-center lg:text-left md:mx-0"
+          >
+            Pro version of popular Astroship starter template made for startups.
+            Built with Astro and Tailwind CSS.
+          </p>
+          <!-- button -->
+          <div
+            class="my-5 flex flex-col items-center sm:flex-row sm:justify-center gap-5 lg:justify-start"
+          >
+            <div>
+              <a
+                href="#"
+                class="bg-indigo-600 text-white rounded-full py-[10px] px-7 text-lg"
+              >
+                Buy Template — $49
+              </a>
+            </div>
+            <div>
+              <a
+                href="#"
+                class="text-lg bg-white rounded-full border-solid border-indigo-700 border-2 text-indigo-700 py-[10px] px-7"
+              >
+                Free Version
+              </a>
+            </div>
+          </div>
+          <div></div>
+        </div>
+
+        <!-- left content -->
+        <div
+          class="py-3 lg:col-span-3 lg:-mr-44 lg:basis-5/6 bg-gradient-to-t relative"
+        >
+          <img src="./img/hero-screenshot.HaV5_ts2_10u77m.png" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <!--brand  -->
+    <section id="banner" class="container mb-24 px-4">
+      <div class="mx-auto my-5">
+        <h2 class="text-center text-gray-500">
+          Trusted by popular startups you know
+        </h2>
+      </div>
+      <div
+        class="flex gap-x-8 md:gap-20 lg:gap-28 items-center justify-center flex-wrap"
+      >
+        <div class="text-gray-500 h-7 md:h-9 my-4">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 97 48"
+            width="97"
+            height="48"
+            fill="currentColor"
+            class="h-full w-auto"
+          >
+            <clipPath id="a"><path d="M0 0h97v48H0z" /></clipPath>
+            <g fill="current" clip-path="url(#a)">
+              <path
+                fill-rule="evenodd"
+                d="M52.513 4v5.42l-6.763 1.443V5.415zm14.066 8.438c-2.64 0-4.338 1.228-5.281 2.082l-.35-1.655H55.02V44l6.736-1.415.027-7.557c.97.694 2.398 1.682 4.769 1.682 4.823 0 9.215-3.845 9.215-12.31-.027-7.744-4.473-11.963-9.188-11.963zm-1.617 18.398c-1.59 0-2.533-.561-3.18-1.255l-.026-9.907c.7-.774 1.67-1.308 3.206-1.308 2.452 0 4.15 2.723 4.15 6.221 0 3.578-1.671 6.249-4.15 6.249zM97 24.667c0-6.836-3.34-12.23-9.727-12.23-6.412 0-10.292 5.394-10.292 12.177 0 8.037 4.58 12.096 11.155 12.096 3.206 0 5.63-.72 7.463-1.736v-5.34c-1.832.908-3.934 1.469-6.601 1.469-2.614 0-4.931-.908-5.227-4.06h13.175c0-.146.01-.477.021-.86v-.007c.015-.524.033-1.14.033-1.509zM83.69 22.13c0-3.017 1.859-4.272 3.556-4.272 1.644 0 3.395 1.255 3.395 4.272zm-31.177-9.24H45.75v23.365h6.763zm-14.439.003.431 1.976c1.59-2.884 4.742-2.296 5.605-1.976v6.142c-.836-.294-3.53-.668-5.12 1.388v15.835h-6.736V12.893zM25.031 7.098l-6.574 1.388-.027 21.389c0 3.952 2.99 6.862 6.978 6.862 2.21 0 3.827-.4 4.716-.88v-5.421c-.863.347-5.12 1.575-5.12-2.377v-9.48h5.12v-5.687h-5.12zM9.107 18.232c-1.428 0-2.29.4-2.29 1.442 0 1.137 1.484 1.637 3.325 2.258 3.001 1.011 6.951 2.343 6.968 7.275 0 4.78-3.853 7.53-9.458 7.53-2.317 0-4.85-.454-7.356-1.522V28.86c2.264 1.228 5.12 2.136 7.356 2.136 1.51 0 2.587-.4 2.587-1.63 0-1.259-1.609-1.834-3.55-2.53C3.73 25.779 0 24.444 0 19.995c0-4.726 3.638-7.557 9.107-7.557 2.237 0 4.446.348 6.683 1.229v6.275c-2.048-1.095-4.635-1.709-6.683-1.709z"
+                clip-rule="evenodd"
+              />
+            </g>
+          </svg>
+        </div>
+        <div class="text-gray-500 h-7 md:h-9 my-4">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="31"
+            fill="currentColor"
+            class="h-full w-auto text-gray-500"
+            viewBox="0 0 106 31"
+          >
+            <g clip-path="url(#a)">
+              <path
+                d="M11.57 5.63v8.4H3.84v-8.4H.17V25.7h3.67v-8.14h7.73v8.14h3.66V5.63h-3.66ZM26.97 19.22a3.03 3.03 0 1 1-6.07 0v-8.6h-3.48v8.6a6.5 6.5 0 1 0 13.02 0v-8.6h-3.47v8.6ZM52.74 11.5c0-1.76 1.17-2.32 2.45-2.32 1.02 0 2.39.78 3.27 1.73l2.28-2.68a7.18 7.18 0 0 0-5.33-2.6c-3.77 0-6.5 2.2-6.5 5.87 0 6.8 8.3 4.64 8.3 8.45 0 1.17-1.13 2.2-2.44 2.2-2.06 0-2.72-1-3.67-2.06l-2.52 2.63a7.46 7.46 0 0 0 6 2.99c3.58 0 6.46-2.24 6.46-5.73 0-7.55-8.3-5.2-8.3-8.48M104.14 22.5c-2.06 0-2.64-.9-2.64-2.25v-6.03h3.2v-3.06h-3.2V7.13l-3.53 1.59V21c0 3.14 2.17 4.72 5.14 4.72.47 0 .94-.03 1.4-.11l.85-3.17c-.38.03-.83.05-1.22.05M40.2 10.72c-1.71 0-2.92.5-4.08 1.64V5.75h-3.48V18c0 4.58 3.31 7.72 7.04 7.72 4.13 0 7.77-3.2 7.77-7.5 0-4.25-3.35-7.5-7.24-7.5Zm-.01 11.5a3.95 3.95 0 1 1 0-7.9 3.95 3.95 0 0 1 0 7.9ZM78.04 18.04c0-4.31-3.63-7.5-7.77-7.5-3.72 0-7.04 3.14-7.04 7.72v12.26h3.49V23.9a5.34 5.34 0 0 0 4.08 1.64 7.37 7.37 0 0 0 7.24-7.5Zm-3.3-.04a3.95 3.95 0 1 1-7.9 0 3.95 3.95 0 0 1 7.9 0Z"
+              />
+              <path
+                d="M89.3 10.37v-3.5a2.7 2.7 0 0 0 1.55-2.43v-.08a2.7 2.7 0 0 0-2.7-2.7h-.08a2.7 2.7 0 0 0-2.7 2.7v.08a2.7 2.7 0 0 0 1.56 2.43v3.5c-1.33.2-2.58.75-3.63 1.6l-9.6-7.48a3.04 3.04 0 1 0-1.44 1.87l9.46 7.35a7.66 7.66 0 0 0 .12 8.63l-2.88 2.87a2.5 2.5 0 1 0 1.66 1.66l2.85-2.84a7.67 7.67 0 1 0 5.82-13.66Zm-1.18 11.5a3.93 3.93 0 1 1 0-7.86 3.93 3.93 0 0 1 0 7.87"
+                opacity="var(--svg-path-opacity)"
+              />
+            </g>
+            <defs>
+              <clipPath id="a">
+                <path fill="current" d="M.17.7h105.2V30.5H.16z" />
+              </clipPath>
+            </defs>
+          </svg>
+        </div>
+        <div class="text-gray-500 h-7 md:h-9 my-4">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 175 48"
+            width="175"
+            height="48"
+            fill="currentColor"
+            class="h-full w-auto object-contain"
+          >
+            <g fill="current">
+              <path
+                d="M38.682 3H6.62a5.344 5.344 0 0 0-5.344 5.344v32.06a5.344 5.344 0 0 0 5.344 5.344h32.06a5.344 5.344 0 0 0 5.344-5.343V8.344A5.344 5.344 0 0 0 38.682 3zM28.35 10.838a1.426 1.426 0 0 1 2.85 0v19.037a1.426 1.426 0 0 1-2.85 0zm-7.124-.722a1.426 1.426 0 0 1 2.85 0v20.662a1.426 1.426 0 0 1-2.85 0zm-7.124.722a1.426 1.426 0 0 1 2.849 0v19.037a1.425 1.425 0 1 1-2.85 0zm-7.125 2.849a1.425 1.425 0 1 1 2.85 0v12.816a1.426 1.426 0 0 1-2.85 0zm30.851 21.735c-.219.19-5.498 4.618-15.177 4.618-9.678 0-14.955-4.429-15.177-4.618a1.424 1.424 0 0 1 1.85-2.166c.083.07 4.798 3.934 13.326 3.934 8.635 0 13.276-3.892 13.321-3.931a1.423 1.423 0 0 1 2.008.154 1.422 1.422 0 0 1-.15 2.009zm.497-8.919a1.426 1.426 0 0 1-2.85 0V13.687a1.425 1.425 0 1 1 2.85 0zM60.983 30.554c0 .713-.545 1.3-1.321 1.3a1.28 1.28 0 0 1-1.3-1.3V18.16c0-.713.545-1.3 1.321-1.3.755 0 1.3.588 1.3 1.3zM77.926 18.16v11.325c0 1.531-.818 2.391-2.118 2.391h-.104c-1.237 0-1.825-.713-2.348-1.762l-2.643-5.137-2.348-5.305.063 5.138.021 5.724c0 .713-.545 1.3-1.321 1.3a1.28 1.28 0 0 1-1.3-1.3V19.21c0-1.406.818-2.392 2.244-2.392h.105c1.32 0 1.866.714 2.39 1.762l2.6 5.097 2.223 4.95-.063-4.74-.02-5.725c0-.713.544-1.3 1.32-1.3a1.277 1.277 0 0 1 1.299 1.299zM88.432 30.534c0 .713-.545 1.3-1.32 1.3a1.28 1.28 0 0 1-1.3-1.3V19.315h-3.25c-.671 0-1.216-.504-1.216-1.237 0-.713.545-1.216 1.215-1.216h9.122c.67 0 1.215.504 1.215 1.237 0 .714-.545 1.216-1.215 1.216h-3.25zM96.317 30.114V18.476c0-1.09.608-1.698 1.72-1.656h7.548c.67 0 1.216.523 1.216 1.237 0 .713-.545 1.215-1.216 1.215h-6.669v3.607h5.893c.65 0 1.174.482 1.174 1.174s-.523 1.175-1.174 1.175h-5.893v4.152h6.67c.67 0 1.215.523 1.215 1.237s-.545 1.215-1.216 1.215h-7.612c-1.09.002-1.698-.606-1.656-1.718zM121.69 30.134c.357.608.126 1.384-.607 1.762-.714.357-1.49.085-1.845-.523l-2.915-5.39h-2.768l.021 4.572c0 .714-.545 1.3-1.32 1.3a1.28 1.28 0 0 1-1.3-1.3V18.476c0-1.09.607-1.698 1.719-1.656h4.97c3.418 0 4.843 2.223 4.843 4.487 0 2.16-1.258 3.754-3.419 4.173zm-8.136-6.521h4.152c1.405 0 2.138-.902 2.138-2.182 0-1.28-.776-2.16-2.16-2.16h-4.13zM127.897 30.722c-1.572-1.405-2.286-3.607-2.286-6.375 0-2.789.692-4.97 2.245-6.353.964-.839 2.264-1.405 4.151-1.405 1.657 0 2.937.378 3.901 1.195.84.67 1.447 1.615 1.804 2.936.188.692-.294 1.384-1.09 1.531-.755.126-1.363-.356-1.594-1.048-.251-.67-.588-1.153-.986-1.49-.545-.482-1.216-.692-2.097-.692-.943 0-1.762.273-2.37.88-.88.88-1.259 2.455-1.259 4.446 0 1.972.357 3.544 1.28 4.425.608.608 1.406.88 2.327.88.965 0 1.698-.251 2.307-.817.314-.294.588-.671.776-1.112.273-.65.84-1.133 1.573-.964.733.168 1.195.88.964 1.572-.378 1.153-1.027 2.076-1.907 2.705-.965.692-2.16 1.049-3.67 1.049-1.929 0-3.146-.567-4.07-1.363zM140.668 24.347c0-4.697 1.929-7.758 6.48-7.758 4.509 0 6.46 2.977 6.46 7.758 0 4.844-1.973 7.76-6.46 7.76-4.571 0-6.48-2.916-6.48-7.76zm10.254 0c0-3.565-1.3-5.304-3.795-5.304-2.454 0-3.754 1.74-3.754 5.304 0 3.566 1.258 5.305 3.754 5.305 2.474 0 3.795-1.74 3.795-5.305zM173.947 30.534c0 .713-.545 1.3-1.32 1.3a1.28 1.28 0 0 1-1.3-1.3v-5.62l.062-5.473-1.825 5.557-1.845 5.473c-.313.964-.964 1.343-1.782 1.343-.86 0-1.49-.399-1.824-1.363l-1.888-5.452-1.74-5.473.062 5.39v5.62c0 .712-.545 1.299-1.321 1.299a1.28 1.28 0 0 1-1.3-1.3V19.316c0-1.552.84-2.454 2.307-2.454 1.384 0 2.16.734 2.6 2.076l1.929 5.725 1.174 3.9 1.196-3.9 1.929-5.725c.44-1.342 1.195-2.076 2.58-2.076 1.467 0 2.285.88 2.285 2.454z"
+              />
+            </g>
+          </svg>
+        </div>
+        <div class="text-gray-500 h-7 md:h-9 my-4">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 175 48"
+            width="175"
+            height="48"
+            fill="currentColor"
+            class="h-full w-auto"
+          >
+            <g fill="current">
+              <path
+                d="M59.655 32.382c-4.139 0-7.494-3.436-7.494-7.674s3.355-7.673 7.494-7.673 7.493 3.435 7.493 7.673c0 4.238-3.355 7.674-7.493 7.674zm7.517.973c.103 1.177 1.044 2.676 2.674 2.676h.953c.37 0 .673-.303.673-.673v-21h-.004a.673.673 0 0 0-.669-.637h-2.955a.674.674 0 0 0-.669.637h-.003v1.707c-1.811-2.235-4.666-3.162-7.529-3.162-6.507 0-11.782 5.285-11.782 11.805s5.275 11.805 11.782 11.805c2.863 0 5.983-1.112 7.528-3.161zm40.885-.973c-4.138 0-7.493-3.436-7.493-7.674s3.355-7.673 7.493-7.673c4.139 0 7.494 3.435 7.494 7.673 0 4.238-3.355 7.674-7.494 7.674zm7.517.973c.104 1.177 1.044 2.676 2.674 2.676h.955c.37 0 .672-.303.672-.673v-21h-.004a.673.673 0 0 0-.668-.637h-2.956a.674.674 0 0 0-.67.637h-.003v1.707c-1.81-2.235-4.665-3.162-7.528-3.162-6.507 0-11.782 5.285-11.782 11.805s5.275 11.805 11.782 11.805c2.863 0 5.982-1.112 7.528-3.161zM161.205 32.186c-4.065 0-7.36-3.368-7.36-7.522s3.295-7.522 7.36-7.522c4.064 0 7.359 3.368 7.359 7.522s-3.295 7.522-7.36 7.522zm7.382.954c.101 1.154 1.025 2.624 2.626 2.624h.937c.363 0 .661-.298.661-.66V14.518h-.004a.66.66 0 0 0-.657-.625h-2.902a.66.66 0 0 0-.657.625h-.004v1.672c-1.778-2.19-4.582-3.099-7.394-3.099-6.39 0-11.572 5.18-11.572 11.572 0 6.391 5.181 11.572 11.572 11.572 2.812 0 5.876-1.09 7.393-3.099zM145.847 33.387l-.002-10.537c0-5.94-3.776-9.947-9.798-9.947-2.874 0-5.505 1.635-6.063 3.066-.18-1.108-.773-2.272-2.61-2.272h-.938a.658.658 0 0 0-.658.653V34.716h.004a.656.656 0 0 0 .655.617h2.893a.662.662 0 0 0 .13-.013c.019-.004.037-.011.055-.016.022-.007.044-.012.065-.02.025-.011.049-.025.073-.039l.035-.019a.672.672 0 0 0 .081-.063c.004-.005.01-.007.013-.011a.645.645 0 0 0 .202-.436h.004V22.687c0-3.19 2.607-5.777 5.822-5.777s5.821 2.586 5.821 5.776l.003 10.055v-.003l.002.027v1.951h.004c.02.342.305.617.655.617H145.188a.659.659 0 0 0 .13-.013c.017-.003.033-.01.05-.015.024-.007.048-.012.07-.022.024-.01.046-.023.068-.035.014-.008.028-.013.041-.022a.618.618 0 0 0 .075-.06l.02-.015a.677.677 0 0 0 .073-.084l.006-.006a.644.644 0 0 0 .122-.344v-.001h.004v-1.329zm-68.094-3.04c2.019 1.37 4.223 2.034 6.342 2.034 2.018 0 4.104-1.023 4.104-2.806 0-2.38-4.546-2.75-7.402-3.7-2.857-.95-5.318-2.914-5.318-6.095 0-4.867 4.431-6.877 8.567-6.877 2.62 0 5.323.846 7.076 2.057.604.447.236.962.236.962l-1.673 2.338c-.188.264-.517.492-.989.206-.472-.285-2.127-1.432-4.65-1.432-2.524 0-4.043 1.141-4.043 2.555 0 1.695 1.975 2.228 4.289 2.806 4.032 1.063 8.43 2.342 8.43 7.18 0 4.289-4.098 6.939-8.627 6.939-3.433 0-6.355-.958-8.806-2.718-.51-.5-.154-.965-.154-.965l1.665-2.327c.339-.435.766-.283.953-.157zM30.153 15.263a8.264 8.264 0 1 1-16.529 0 8.264 8.264 0 0 1 16.529 0M11.232 24.774a8.232 8.232 0 1 0 0 16.462 8.232 8.232 0 0 0 0-16.462M32.385 24.773c-4.447 0-8.053 3.685-8.053 8.232 0 4.546 3.606 8.231 8.053 8.231 4.447 0 8.053-3.685 8.053-8.231 0-4.547-3.606-8.232-8.053-8.232"
+              />
+            </g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- Workflows -->
+    <section id="workflows" class="container mb-10 px-4">
+      <div class="max-w-4xl mx-auto flex flex-col justify-center items-center">
+        <button class="bg-[#F3E8FF] border rounded-full py-1 px-3 cursor-text">
+          <h3 class="uppercase text-xs text-purple-600 font-bold text-center">
+            two-col features
+          </h3>
+        </button>
+
+        <h2 class="capitalize text-4xl lg:text-5xl font-bold text-center m-5">
+          supercharge your workflows
+        </h2>
+        <p class="text-center text-pretty text-gray-600 text-lg">
+          Unlock your team's true potential with our state-of-the-art SaaS
+          platform. From intelligent task management to real-time collaboration
+          and top-notch data security, we have everything you need to streamline
+          your workflows and achieve high productivity.
+        </p>
+      </div>
+    </section>
+
+    <!-- experience -->
+    <section class="container mb-20 px-4">
+      <div
+        class="flex flex-col justify-between items-center md:flex-row md:items-center"
+      >
+        <!-- right  -->
+        <div class="md:w-1/2">
+          <div><img src="./img/6.Ep0jo6kx_Z2s10bH.png" alt="" /></div>
+        </div>
+
+        <!-- left  -->
+        <div
+          class="flex flex-col items-start justify-around max-w-md mx-auto md:w-1/2"
+        >
+          <button
+            class="bg-[#F3E8FF] border rounded-full py-1 px-3 cursor-text mb-3"
+          >
+            <h3 class="text-xs text-purple-600 font-bold text-center">
+              Simplified Workflows
+            </h3>
+          </button>
+          <h3 class="text-2xl text-balance">
+            Experience the Ultimate Boost in Productivity with Our Intuitive
+            Platform
+          </h3>
+          <p class="my-5 text-balance text-gray-600">
+            Streamline your tasks and collaborate seamlessly with our
+            cutting-edge SaaS startup platform. Unlock the potential of your
+            team and take productivity to new heights.
+          </p>
+          <ul class="flex flex-col gap-3 mb-5">
+            <li class="flex justify-start items-center gap-5">
+              <i class="fa-solid fa-circle-check"></i>
+              <p class="text-gray-700 text-sm">Intelligent Task Management</p>
+            </li>
+            <li class="flex justify-start items-center gap-5">
+              <i class="fa-solid fa-circle-check"></i>
+              <p class="text-gray-700 text-sm">Real-time Collaboration</p>
+            </li>
+            <li class="flex justify-start items-center gap-5">
+              <i class="fa-solid fa-circle-check"></i>
+              <p class="text-gray-700 text-sm">Data Security & Privacy</p>
+            </li>
+          </ul>
+          <div class="flex gap-2">
+            <button>
+              <a
+                href="#"
+                class="bg-[#4f46e5] text-center px-4 py-2 rounded-full"
+                ><span class="text-white py-2 text-sm">Start 14-day trial</span
+                ><i
+                  class="fa-solid fa-chevron-right text-white text-xs ml-2 hover:translate-x-px transition-all"
+                ></i
+              ></a>
+            </button>
+            <button>
+              <a
+                href="#"
+                class="text-sm text-gray-600 rounded-full text-center px-4 py-2 w-full"
+                ><span>Contact Sales</span></a
+              >
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AI- Power -->
+    <section class="container px-4">
+      <div
+        class="flex flex-col gap-8 justify-between items-center md:flex-row-reverse md:items-center"
+      >
+        <!-- right  -->
+        <div class="md:w-1/2">
+          <div><img src="./img/2.ldT67BXv_ZgktxF.png" alt="" /></div>
+        </div>
+        <!-- left  -->
+        <div
+          class="flex flex-col items-start justify-around max-w-md mx-auto md:w-1/2"
+        >
+          <button
+            class="bg-[#F3E8FF] border rounded-full py-1 px-3 cursor-text mb-3"
+          >
+            <h3 class="text-xs text-purple-600 font-bold text-center">
+              AI-Powered Insights
+            </h3>
+          </button>
+          <h3 class="text-2xl text-balance">
+            Supercharge Your Marketing Strategy with Advanced Analytics
+          </h3>
+          <p class="my-5 text-balance text-gray-600">
+            Harness the potential of AI-driven marketing analytics to optimize
+            your campaigns, understand your audience better, and achieve
+            unprecedented growth.
+          </p>
+          <ul class="flex flex-col gap-3 mb-5">
+            <li class="flex justify-start items-center gap-5">
+              <i class="fa-solid fa-circle-check"></i>
+              <p class="text-gray-700 text-sm">Smart Audience Segmentation</p>
+            </li>
+            <li class="flex justify-start items-center gap-5">
+              <i class="fa-solid fa-circle-check"></i>
+              <p class="text-gray-700 text-sm">
+                Predictive Campaign Performance
+              </p>
+            </li>
+            <li class="flex justify-start items-center gap-5">
+              <i class="fa-solid fa-circle-check"></i>
+              <p class="text-gray-700 text-sm">Real-time Data Visualization</p>
+            </li>
+          </ul>
+          <div class="flex gap-2">
+            <button>
+              <a
+                href="#"
+                class="bg-[#4f46e5] text-center px-4 py-2 rounded-full"
+                ><span class="text-white py-2 text-sm">Start 14-day trial</span
+                ><i
+                  class="fa-solid fa-chevron-right text-white text-xs ml-2 hover:translate-x-px transition-all"
+                ></i
+              ></a>
+            </button>
+            <button>
+              <a
+                href="#"
+                class="text-sm text-gray-600 rounded-full text-center px-4 py-2 w-full"
+                ><span>Contact Sales</span></a
+              >
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- js -->
+    <script src="./main.js"></script>
+  </body>
+</html>
