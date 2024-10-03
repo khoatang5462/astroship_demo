@@ -1,7 +1,7 @@
 
 const topMenu = document.getElementById('top-menu');
 const toggleMenu = document.getElementById('top-menu-icon');
-const icon = toggleMenu.querySelector('.fa-xmark')
+const icon = toggleMenu.querySelector('.fa-bars')
 topMenu.classList.add('hidden');
 
 toggleMenu.onclick = function (){
